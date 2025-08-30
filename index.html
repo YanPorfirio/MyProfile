@@ -19,7 +19,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgb(255, 255, 255);
+      background-color: rgb(22, 255, 255);
       border: none;
       cursor: pointer;
       width: 70px;
@@ -58,16 +58,39 @@
       background-color: #000;
       transform: scale(1.1);
     }
+
+    /* Facebook */
+    .facebook {
+      background-color: #4267B2;
+    }
+    .facebook:hover {
+      background-color: #365899;
+      transform: scale(1.1);
+    }
+        
   </style>
 </head>
 <body>
+  <div class="navbar-container">
+    <nav class="navbar">
+      <div class="navbar-links">
+        <a href="index.html">Início</a>
+        <a href="indexProjetos.html">Projetos</a>
+        <a href="indexContato.html">Contato</a>
+      </div>
+    </nav>
+  </div>
 
   <div class="bloco">
     <header>
-      <h1>Olá,<br>Eu sou <span class="Yan">Yan</span><br><small>Desenvolvedor Front-End</small></h1>
+      <h1>
+        Olá,<br>Eu sou <span class="Yan">Yan</span><br><small>Desenvolvedor Front-End</small>
+      </h1>
       <img src="img/Imagem de perfil definitiva.png" alt="Imagem de perfil">
     </header>
   </div>
+
+  <hr>
 
   <div class="sobre-mim">
     <h2>Sobre mim</h2>
@@ -92,12 +115,30 @@
     <button class="github" onclick="window.open('//github.com/yanporfirio', '_blank')">
       <i class="fa-brands fa-github"></i>
     </button>
+
+    <!-- Botão Facebook -->
+    <button class="facebook" onclick="window.open('https:// https://www.facebook.com/yan.porfirio.9', '_blank')">
+      <i class="fa-brands fa-facebook-f"></i>
+    </button>
   </div>
 
-  <div class="contato">
-    <h2>Contato</h2>
-    <p>Email: yanporfirio13@gmail.com</p>
+  <div class="skills">
+    <h2><span>Skills</span></h2>
+    <p><small>Html5 / Css3 / JavaScript</small></p>
+    <div class="skills-icons">
+      <i class="fa-brands fa-html5" style="color: #E34F26;"></i>
+      <i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i>
+      <i class="fa-brands fa-js" style="color: #F7DF1E;"></i>
+    </div>
   </div>
+
+  <div class="hr2">
+    <hr>
+  </div>
+
+  <footer>
+    <p>© 2025 Yan Porfírio - Todos os direitos reservados</p>
+  </footer>
 
 </body>
 </html>
