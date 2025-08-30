@@ -1,0 +1,107 @@
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+body {
+    background-color: rgb(10, 10, 10);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+    margin-left: 900px;
+    margin-right: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px 20px 20px 20px;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    padding: 5px 0;
+    display: inline-block;
+    transition: color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #007bff;
+    transition: width 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+    
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+nav a:after {
+    content: "";
+    position: absolute; 
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: var(--accent-color, #ffffff);
+    transition: width 0.5s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.contato {
+    text-align: center;
+    margin-top: 50px;
+}
