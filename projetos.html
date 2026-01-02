@@ -23,13 +23,13 @@
     </nav>
 </div>
 
-<div class="bloco">
+<div class="bloco fade-in">
     <header>
-        <h1>Meus Projetos</h1>
+        <h1 class="slide-in-left">Meus Projetos</h1>
     </header>
 </div>
 <div class="projeto-container">
-    <div class="simulador-card">
+    <div class="simulador-card fade-in fade-in-delay-1">
         <img src="imagens/imagem de calculando orçamento.jpg" alt="Simulador de Orçamento">
         <div class="projeto-info">
             <h3>Simulador de Orçamento</h3>
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div class="kanban-card">
+    <div class="kanban-card fade-in fade-in-delay-2">
         <img src="imagens/imagem de kanban.jpg" alt="Kanban">
         <div class="projeto-info">
             <h3>Kanban</h3>
@@ -56,6 +56,35 @@
       } else {
         navbarContainer.classList.remove('scrolled');
       }
+    });
+
+    // Animações de entrada ao fazer scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observar todos os elementos com classes de animação
+    document.querySelectorAll('.fade-in, .slide-in-left, .scale-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Animação imediata para elementos acima da dobra
+    window.addEventListener('load', function() {
+      const firstElements = document.querySelectorAll('.bloco, .bloco header h1');
+      firstElements.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.classList.add('visible');
+        }
+      });
     });
   </script>
 

@@ -23,50 +23,50 @@
   </div>
 
   <main>
-    <div class="bloco">
+    <div class="bloco fade-in">
       <header>
-        <h1>
+        <h1 class="slide-in-left">
           Olá,<br>Eu sou <span class="Yan">Yan</span><br><small>Desenvolvedor Front-End</small>
         </h1>
-        <img src="imagens/Imagem de perfil definitiva.png" alt="Foto de perfil de Yan Porfírio">
+        <img src="imagens/Imagem de perfil definitiva.png" alt="Foto de perfil de Yan Porfírio" class="slide-in-right scale-in">
       </header>
     </div>
 
     <hr>
 
-    <section class="sobre-mim">
+    <section class="sobre-mim fade-in">
       <h2>Sobre mim</h2>
       <p>Sou um desenvolvedor Front-End, que está em busca<br> 
         de sua primeira vaga de emprego na área da programação web,<br>
         estou disposto a aprender para melhorar como dev.</p>
     </section>
     
-    <section class="redes-sociais">
+    <section class="redes-sociais fade-in">
       <h2>Redes Sociais</h2>
-      <a href="https://www.instagram.com/yanporfirio_15/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="button-link instagram">
+      <a href="https://www.instagram.com/yanporfirio_15/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="button-link instagram scale-in fade-in-delay-1">
         <i class="fa-brands fa-instagram"></i>
       </a>
 
-      <a href="https://www.linkedin.com/in/yan-barbosa-porfirio" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="button-link linkedin">
+      <a href="https://www.linkedin.com/in/yan-barbosa-porfirio" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="button-link linkedin scale-in fade-in-delay-2">
         <i class="fa-brands fa-linkedin-in"></i>
       </a>
       
-      <a href="https://github.com/YanPorfirio" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="button-link github">
+      <a href="https://github.com/YanPorfirio" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="button-link github scale-in fade-in-delay-3">
         <i class="fa-brands fa-github"></i>
       </a>
 
-      <a href="https://www.facebook.com/yan.porfirio.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="button-link facebook">
+      <a href="https://www.facebook.com/yan.porfirio.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="button-link facebook scale-in fade-in-delay-4">
         <i class="fa-brands fa-facebook-f"></i>
       </a>
     </section>
 
-    <section class="skills">
+    <section class="skills fade-in">
       <h2><span>Skills</span></h2>
       <p><small>HTML5 / CSS3 / JavaScript</small></p>
       <div class="skills-icons">
-        <i class="fa-brands fa-html5" style="color: #E34F26;" aria-hidden="true"></i>
-        <i class="fa-brands fa-css3-alt" style="color: #1572B6;" aria-hidden="true"></i>
-        <i class="fa-brands fa-js" style="color: #F7DF1E;" aria-hidden="true"></i>
+        <i class="fa-brands fa-html5 scale-in fade-in-delay-1" style="color: #E34F26;" aria-hidden="true"></i>
+        <i class="fa-brands fa-css3-alt scale-in fade-in-delay-2" style="color: #1572B6;" aria-hidden="true"></i>
+        <i class="fa-brands fa-js scale-in fade-in-delay-3" style="color: #F7DF1E;" aria-hidden="true"></i>
       </div>
     </section>
   </main>
@@ -89,6 +89,35 @@
       } else {
         navbarContainer.classList.remove('scrolled');
       }
+    });
+
+    // Animações de entrada ao fazer scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observar todos os elementos com classes de animação
+    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Animação imediata para elementos acima da dobra
+    window.addEventListener('load', function() {
+      const firstElements = document.querySelectorAll('.bloco, .bloco header h1, .bloco header img');
+      firstElements.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.classList.add('visible');
+        }
+      });
     });
   </script>
 
