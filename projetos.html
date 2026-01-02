@@ -13,6 +13,10 @@
 </head>
 
 <body>
+  <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+    <i class="fas fa-moon" id="themeIcon"></i>
+  </button>
+
 <div class="navbar-container">
     <nav class="navbar">
         <div class="navbar-links">
@@ -85,6 +89,37 @@
           el.classList.add('visible');
         }
       });
+    });
+
+    // Sistema de Toggle de Tema
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const htmlElement = document.documentElement;
+
+    // Verificar tema salvo no localStorage
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    htmlElement.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+
+    // Função para atualizar o ícone
+    function updateThemeIcon(theme) {
+      if (theme === 'light') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      }
+    }
+
+    // Alternar tema ao clicar no botão
+    themeToggle.addEventListener('click', function() {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
     });
   </script>
 

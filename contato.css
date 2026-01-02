@@ -1,3 +1,31 @@
+:root {
+    /* Modo Escuro (padrão) */
+    --bg-primary: rgb(10, 10, 10);
+    --bg-secondary: #333;
+    --bg-tertiary: #222;
+    --text-primary: #ffffff;
+    --text-secondary: #aaa;
+    --border-color: #333;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --navbar-scrolled: rgba(10, 10, 10, 0.95);
+    --card-bg: #303030;
+    --hr-color: #333;
+}
+
+[data-theme="light"] {
+    /* Modo Claro */
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #e0e0e0;
+    --bg-tertiary: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --navbar-scrolled: rgba(245, 245, 245, 0.95);
+    --card-bg: #ffffff;
+    --hr-color: #ddd;
+}
+
 html {
     scroll-behavior: smooth;
     scrollbar-gutter: stable;
@@ -16,18 +44,18 @@ html {
 }
 
 .navbar-container.scrolled {
-    background-color: rgba(10, 10, 10, 0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: var(--navbar-scrolled);
+    box-shadow: 0 4px 8px var(--shadow-color);
     backdrop-filter: blur(10px);
 }
 
 body {
-    background-color: rgb(10, 10, 10);
+    background-color: var(--bg-primary);
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: var(--text-primary);
     margin: 0;
     padding-top: 80px; /* Espaço para a navbar fixa */
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav {
