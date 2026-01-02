@@ -10,65 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <title>Perfil</title>
-  <style>
-    .Yan {
-      color: #d41717;
-    }
-
-    button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgb(22, 255, 255);
-      border: none;
-      cursor: pointer;
-      width: 70px;
-      height: 70px;
-      margin: 10px;
-      border-radius: 50%;
-      transition: transform 0.3s, background 0.3s;
-      font-size: 28px;
-      color: white;
-    }
-
-    /* Instagram */
-    .instagram {
-      background-color: #E1306C;
-    }
-    .instagram:hover {
-      background-color: #C13584;
-      transform: scale(1.1);
-    }
-
-    /* LinkedIn */
-    .linkedin {
-      background-color: #0077B5;
-    }
-    .linkedin:hover {
-      background-color: #005582;
-      transform: scale(1.1);
-    }
-
-    /* GitHub */
-    .github {
-      background-color: #333;
-      transform: 1.1s;
-    }
-    .github:hover {
-      background-color: #000;
-      transform: scale(1.1);
-    }
-
-    /* Facebook */
-    .facebook {
-      background-color: #4267B2;
-    }
-    .facebook:hover {
-      background-color: #365899;
-      transform: scale(1.1);
-    }
-        
-  </style>
 </head>
 <body>
   <div class="navbar-container">
@@ -81,56 +22,54 @@
     </nav>
   </div>
 
-  <div class="bloco">
-    <header>
-      <h1>
-        Olá,<br>Eu sou <span class="Yan">Yan</span><br><small>Desenvolvedor Front-End</small>
-      </h1>
-      <img src="imagens/Imagem de perfil definitiva.png" alt="Imagem de perfil">
-    </header>
-  </div>
-
-  <hr>
-
-  <div class="sobre-mim">
-    <h2>Sobre mim</h2>
-    <p>Sou um desenvolvedor Front-End, que está em busca<br> 
-      de sua primeira vaga de emprego na área da programação web,<br>
-      estou disposto a aprender para melhorar como dev.</p>
-  </div>
-  
-  <div class="redes-sociais">
-    <h2>Redes Sociais</h2>
-    <!-- Botão Instagram -->
-    <button class="instagram" onclick="window.open('https://www.instagram.com/yanporfirio_15/', '_blank')">
-      <i class="fa-brands fa-instagram"></i>
-    </button>
-
-    <!-- Botão LinkedIn -->
-    <button class="linkedin" onclick="window.open('https://www.linkedin.com/in/yan-barbosa-porfirio', '_blank')">
-      <i class="fa-brands fa-linkedin-in"></i>
-    </button>
-
-    <!-- Botão GitHub -->
-    <button class="github" onclick="window.open('//github.com/yanporfirio', '_blank')">
-      <i class="fa-brands fa-github"></i>
-    </button>
-
-    <!-- Botão Facebook -->
-    <button class="facebook" onclick="window.open('https:// https://www.facebook.com/yan.porfirio.9', '_blank')">
-      <i class="fa-brands fa-facebook-f"></i>
-    </button>
-  </div>
-
-  <div class="skills">
-    <h2><span>Skills</span></h2>
-    <p><small>Html5 / Css3 / JavaScript</small></p>
-    <div class="skills-icons">
-      <i class="fa-brands fa-html5" style="color: #E34F26;"></i>
-      <i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i>
-      <i class="fa-brands fa-js" style="color: #F7DF1E;"></i>
+  <main>
+    <div class="bloco">
+      <header>
+        <h1>
+          Olá,<br>Eu sou <span class="Yan">Yan</span><br><small>Desenvolvedor Front-End</small>
+        </h1>
+        <img src="imagens/Imagem de perfil definitiva.png" alt="Foto de perfil de Yan Porfírio">
+      </header>
     </div>
-  </div>
+
+    <hr>
+
+    <section class="sobre-mim">
+      <h2>Sobre mim</h2>
+      <p>Sou um desenvolvedor Front-End, que está em busca<br> 
+        de sua primeira vaga de emprego na área da programação web,<br>
+        estou disposto a aprender para melhorar como dev.</p>
+    </section>
+    
+    <section class="redes-sociais">
+      <h2>Redes Sociais</h2>
+      <a href="https://www.instagram.com/yanporfirio_15/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="button-link instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/yan-barbosa-porfirio" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="button-link linkedin">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      
+      <a href="https://github.com/YanPorfirio" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="button-link github">
+        <i class="fa-brands fa-github"></i>
+      </a>
+
+      <a href="https://www.facebook.com/yan.porfirio.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="button-link facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+    </section>
+
+    <section class="skills">
+      <h2><span>Skills</span></h2>
+      <p><small>HTML5 / CSS3 / JavaScript</small></p>
+      <div class="skills-icons">
+        <i class="fa-brands fa-html5" style="color: #E34F26;" aria-hidden="true"></i>
+        <i class="fa-brands fa-css3-alt" style="color: #1572B6;" aria-hidden="true"></i>
+        <i class="fa-brands fa-js" style="color: #F7DF1E;" aria-hidden="true"></i>
+      </div>
+    </section>
+  </main>
 
   <div class="hr2">
     <hr>

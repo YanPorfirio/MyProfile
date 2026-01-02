@@ -252,6 +252,65 @@ footer {
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos do nome Yan */
+.Yan {
+    color: #d41717;
+}
+
+/* Estilos dos botões de redes sociais */
+.button-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 50%;
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.button-link:hover {
+    transform: scale(1.1);
+}
+
+/* Instagram */
+.instagram {
+    background-color: #E1306C;
+}
+
+.instagram:hover {
+    background-color: #C13584;
+}
+
+/* LinkedIn */
+.linkedin {
+    background-color: #0077B5;
+}
+
+.linkedin:hover {
+    background-color: #005582;
+}
+
+/* GitHub */
+.github {
+    background-color: #333;
+}
+
+.github:hover {
+    background-color: #000;
+}
+
+/* Facebook */
+.facebook {
+    background-color: #4267B2;
+}
+
+.facebook:hover {
+    background-color: #365899;
+}
 
 @media (max-width: 768px) {
     .bloco header {
