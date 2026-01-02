@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<div id="navber-container">
+<div class="navbar-container">
     <nav class="navbar">
         <div class="navbar-links">
             <a href="index.html">Início</a>
@@ -45,7 +45,19 @@
         </div>
     </div>
 </div>
-   
+
+  <script>
+    // Efeito de scroll na navbar
+    const navbarContainer = document.querySelector('.navbar-container');
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        navbarContainer.classList.add('scrolled');
+      } else {
+        navbarContainer.classList.remove('scrolled');
+      }
+    });
+  </script>
 
 </body>
 </html>

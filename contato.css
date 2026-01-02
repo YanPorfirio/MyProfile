@@ -3,11 +3,30 @@ html {
     scrollbar-gutter: stable;
 }
 
+/* Navbar Container - Fixa no topo */
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 15px 20px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-container.scrolled {
+    background-color: rgba(10, 10, 10, 0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
 body {
     background-color: rgb(10, 10, 10);
     font-family: 'Montserrat', sans-serif;
     color: white;
-    margin: 0; 
+    margin: 0;
+    padding-top: 80px; /* Espaço para a navbar fixa */
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -21,7 +40,11 @@ nav {
     margin-right: 100px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 20px 20px 20px 20px;
-    
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar-container.scrolled nav {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 nav ul {
@@ -166,4 +189,20 @@ button {
     justify-content: center;
     align-items: center;
     margin-left: -15px;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 10px 15px;
+    }
+
+    nav {
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 15px;
+    }
+
+    body {
+        padding-top: 70px;
+    }
 }
