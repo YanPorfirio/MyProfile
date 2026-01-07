@@ -195,6 +195,17 @@ hr {
     margin: 0;
 }
 
+.curriculo {
+    background-color: #333;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 20px;
+    transition: transform 0.3s, background 0.3s;
+    font-size: 28px;
+}
+
+
 .redes-sociais {
     display: flex;
     gap: 20px;
