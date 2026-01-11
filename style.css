@@ -195,50 +195,6 @@ hr {
     margin: 0;
 }
 
-
-.btn-curriculo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #333;
-    border: 2px solid #333;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 28px;
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    text-decoration: none;
-    transition: transform 0.3s, background 0.3s;
-    margin: 20px;
-}
-
-.btn-curriculo:hover {
-    transform: scale(1.1);
-    background-color: #333;
-}
-
-.btn-curriculo i {
-    font-size: 28px;
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    text-decoration: none;
-    transition: transform 0.3s, background 0.3s;
-}
-    
-.btn-curriculo p {
-    font-size: 28px;
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    text-decoration: none;
-    transition: transform 0.3s, background 0.3s;
-}
-
-
-
-
 .redes-sociais {
     display: flex;
     gap: 20px;
