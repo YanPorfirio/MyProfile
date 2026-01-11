@@ -2,9 +2,7 @@
 
 Este repositório contém meu **site de portfólio pessoal**, onde apresento quem eu sou, minhas habilidades e alguns projetos que venho desenvolvendo enquanto estudo e evoluo como desenvolvedor.
 
-A ideia aqui não é só mostrar resultado visual, mas também **organização, clareza de código e aprendizado contínuo**.
-
----
+--
 
 ## Sobre mim
 
